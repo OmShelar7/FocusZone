@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
     chrome.storage.local.get('focusModeEnabled', (data) => {
       if (data.focusModeEnabled) {
-        toggleButton.textContent = 'Turn off WatchZone Mode';
+        toggleButton.textContent = 'Turn off FocusZone Mode';
         toggleButton.classList.add('off');
       } else {
-        toggleButton.textContent = 'Turn on WatchZone Mode';
+        toggleButton.textContent = 'Turn on FocusZone Mode';
         toggleButton.classList.remove('off');
       }
     });
@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const newValue = !data.focusModeEnabled;
         chrome.storage.local.set({ focusModeEnabled: newValue }, () => {
           if (newValue) {
-            toggleButton.textContent = 'Turn off WatchZone Mode';
+            toggleButton.textContent = 'Turn off FocusZone Mode';
             toggleButton.classList.add('off');
           } else {
-            toggleButton.textContent = 'Turn on WatchZone Mode';
+            toggleButton.textContent = 'Turn on FocusZone Mode';
             toggleButton.classList.remove('off');
           }
           chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
