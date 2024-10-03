@@ -24,7 +24,7 @@ To install the FocusZone Chrome extension:
 Clone the Repository:
 
 ```bash
-  git clone https://github.com/OmShelar7/WatchZone.git
+  git clone https://github.com/OmShelar7/FocusZone.git
 ```
 
 
